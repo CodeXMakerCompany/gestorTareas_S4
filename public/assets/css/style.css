@@ -1,0 +1,37 @@
+body{
+	background: white;
+}
+
+.example-wrapper { 
+	margin: 1em auto; 
+	max-width: 800px; 
+	width: 95%; font: 
+	18px/1.5 sans-serif; 
+}
+.example-wrapper code { 
+	background: #F5F5F5; 
+	padding: 2px 6px; 
+}
+
+input[type="text"],
+input[type="password"],
+input[type="email"]{
+	width: 80%;
+	border-radius: 6px;
+}
+
+label{
+	display: block;
+	width: 80%;
+	margin-top: 15px;
+}
+
+.btn-registro{
+	margin-top: 15px;
+	transition: 0.3s;
+}
+
+.btn-registro:hover{
+	background: #04A835 !important;
+	border-color: #04A835 !important;
+}

@@ -1,0 +1,32 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Crear tarea{% endblock %}
+
+{% block body %}
+
+
+<div class="example-wrapper">
+    
+    <div class="card">
+
+      {% if edit is defined%}
+        <div class="card-header">
+          Actualizar tarea <i class="fas fa-plus-circle"></i>
+        </div>
+      {% else %}
+          <div class="card-header">
+            Crear tarea <i class="fas fa-plus-circle"></i>
+          </div>
+      {% endif %}
+      
+      <div class="card-text">
+      		<div style="margin:20px">
+      			{{ form_start(form) }}
+				{{ form_widget(form) }}
+				{{ form_end(form) }}
+      		</div>
+      </div>
+    </div>
+			
+
+{% endblock %}

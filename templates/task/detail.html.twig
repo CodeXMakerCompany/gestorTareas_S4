@@ -1,0 +1,38 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Tareas{% endblock %}
+
+{% block body %}
+
+
+<div class="example-wrapper">
+    
+    <div class="card">
+      <div class="card-header">
+        {{task.title}} <i class="fa fa-check-circle"></i>
+      </div>
+      <div class="card-body">
+        <h5 class="card-title">
+        {{task.user.name}} {{task.user.surname}} | 
+        {{task.createdAt|date('d/m/Y h:i')}} |
+            Prioridad:
+            {% if task.priority == 'high' %}
+                        {{'Alta'}}
+                    {% endif %}
+                    {% if task.priority == 'medium' %}
+                        {{'Media'}}
+                    {% endif %}
+                    {% if task.priority == 'low' %}
+                        {{'Baja'}}
+            {% endif %} |
+            Tiempo asignado: {{task.hours}} hr.
+        </h5>
+        <p class="card-text">{{task.content}}</p>
+      </div>
+    </div>
+
+    		
+
+    							  						  
+
+{% endblock %}

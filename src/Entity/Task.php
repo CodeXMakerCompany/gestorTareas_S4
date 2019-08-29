@@ -50,6 +50,13 @@ class Task
     private $hours;
 
     /**
+     * @var string
+     *
+     * @ORM\Column(name="status", type="string", length=50, nullable=false)
+     */
+    private $status = '';
+
+    /**
      * @var \DateTime
      *
      * @ORM\Column(name="created_at", type="datetime", nullable=false)
@@ -119,6 +126,19 @@ class Task
         return $this;
     }
 
+    public function getStatus(): ?string
+    {
+        return $this->status;
+    }
+
+    public function setStatus(string $status): self
+    {
+        $this->status = $status;
+
+        return $this;
+    }
+
+
     public function getCreatedAt(): ?\DateTimeInterface
     {
         return $this->createdAt;
@@ -136,7 +156,7 @@ class Task
         return $this->user;
     }
 
-    public function setUser(?Users $user): self
+    public function setUser(?User $user): self
     {
         $this->user = $user;
 
